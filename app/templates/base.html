@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title }} | G.H. Raisoni Institute of Engg. & Technology</title>
+    <title>{{ title }} | Raisoni Online Examination System</title>
     <!-- In the head tag, include link to Font Awesome CSS so we can use icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -21,7 +21,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand topnav" href="{{ url_for('home.homepage') }}">G.H. Raisoni Institute of Engg. & Technology</a>
+              <a class="navbar-brand topnav" href="{{ url_for('home.homepage') }}">Online Examination System</a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
@@ -30,7 +30,7 @@
                       <li><a href="{{ url_for('home.admin_dashboard') }}">Dashboard</a></li>
                       <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
                       <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
-                      <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
+                      <li><a href="{{ url_for('admin.list_employees') }}">Students</a></li>
                     {% else %}
                       <li><a href="{{ url_for('home.dashboard') }}">Dashboard</a></li>
                     {% endif %}
@@ -39,6 +39,7 @@
 
                   {% else %}
                       <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
+                      <li><a href="{{ url_for('home.library') }}">Library</a></li>
                       <li><a href="{{ url_for('auth.register') }}">Register</a></li>
                       <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                     {% endif %}
@@ -66,7 +67,7 @@
                           <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                         {% endif %}
                     </ul>
-                    <p class="copyright text-muted small">Copyright © 2016. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright © 2018. G. H. Raisoni Institute of Engineering and Technology, All Rights Reserved</p>
                 </div>
             </div>
         </div>

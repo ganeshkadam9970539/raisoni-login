@@ -13,6 +13,16 @@ def homepage():
     """
     return render_template('home/index.html', title="Welcome")
 
+# for library page code
+@home.route('/library')
+def library():
+    """
+    Render the Library pagg on route /library
+
+    """
+    return render_template('home/library.html', title="Library")
+
+
 
 @home.route('/dashboard')
 @login_required
